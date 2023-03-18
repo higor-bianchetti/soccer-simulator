@@ -9,18 +9,19 @@ import styles from './styles.module.scss';
 interface MobileMenuProps {
   isOpen: boolean;
   isMobile?: boolean;
+  active?: number;
 }
 
-export function Menu({ isOpen, isMobile = true }: MobileMenuProps) {
+export function Menu({ isOpen, isMobile = true, active = 0 }: MobileMenuProps) {
   return (
     isOpen ?
       <menu className={isMobile ? styles.mobMenu : styles.menu}>
         <ul>
-          <li><img src={championsLeague.src} alt="Champions League" /> Champions League</li>
-          <li><img src={europeLeague.src} alt="Europe League" /> Europe League</li>
-          <li><img src={premierLeague.src} alt="Premier League" /> Premier League</li>
-          <li><img src={libertadores.src} alt="Libertadores" /> Libertadores</li>
-          <li><img src={serieA.src} alt="Brasileiro Série A" /> Brasileiro Série A</li>
+          <li className={active == 0 ? styles.active : ''}><img src={championsLeague.src} alt="Champions League" /> Champions League</li>
+          <li className={active == 1 ? styles.active : ''}><img src={europeLeague.src} alt="Europe League" /> Europe League</li>
+          <li className={active == 2 ? styles.active : ''}><img src={premierLeague.src} alt="Premier League" /> Premier League</li>
+          <li className={active == 3 ? styles.active : ''}><img src={libertadores.src} alt="Libertadores" /> Libertadores</li>
+          <li className={active == 4 ? styles.active : ''}><img src={serieA.src} alt="Brasileiro Série A" /> Brasileiro Série A</li>
         </ul>
       </menu>
     :
