@@ -83,6 +83,9 @@ export function LeagueBanner({league, season, startDate, endDate}: LeagueBannerP
     let end = new Date(endDate).getTime();
     let today = new Date().getTime();
 
+    if(today < start)
+      return 0;
+
     return ((today - start) * 100) / (end - start);
   }
 
