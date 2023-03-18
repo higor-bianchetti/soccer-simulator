@@ -1,4 +1,9 @@
 import Head from 'next/head';
+import { LeagueBanner } from '../components/LeagueBanner';
+
+import { Leagues } from '../enums/leagues';
+
+import styles from './styles.module.scss';
 
 export default function EuropeLeague() {
   return (
@@ -7,7 +12,9 @@ export default function EuropeLeague() {
         <title>Europe League</title>
       </Head>
 
-      <div>Europe League</div>
+      <main className={styles.main}>
+        <LeagueBanner league={Leagues.EUROPE_LEAGUE} season="22/23" startDate='08/04/22' endDate='05/30/23' />
+      </main>
     </>
   )
 }
