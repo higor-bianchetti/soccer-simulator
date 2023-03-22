@@ -47,8 +47,11 @@
 .menu {
   background-color: var(--bg-header);
   color: var(--text-header);
-  width: 100vw;
   border-top: solid 1px var(--text-header);
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 4.5rem;
 
   ul {
     list-style-type: none;
