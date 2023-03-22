@@ -1,0 +1,108 @@
+.theader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 3px var(--gray-300);
+  padding: .25rem;
+
+  .title {
+    margin-left: .5rem;
+  }
+
+  .score {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 25rem;
+
+    .values {
+      padding: 0 .5rem;
+      min-width: 2.5rem;
+    }
+    
+    @media(max-width: 426px) {
+      min-width: 6rem;
+    }
+  }
+}
+
+.tbody {
+  .rank {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--gray-300);
+
+    &:hover {
+      background-color: var(--gray-100);
+    }
+
+    .team {
+      display: flex;
+      align-items: center;
+      padding: .25rem;
+
+      .pos {
+        font-size: 1.25rem;
+        font-weight: bold;
+        min-width: 2rem;
+        text-align: center;
+      }
+
+      .imgTeam {
+        display: flex;
+        align-items: center;
+        margin-right: .5rem;
+
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+
+    .stats {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-right: .75rem;
+      min-width: 25rem;
+
+      .values {
+        padding: 0 .5rem;
+        min-width: 2.5rem;
+      }
+
+      @media(max-width: 426px) {
+        min-width: 6rem;
+        margin-right: 0;
+
+        .values {
+          padding: 0 .5rem;
+        }
+      }
+
+      .form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .status {
+          width: .75rem;
+          height: .75rem;
+          background-color: var(--gray-400);
+          border-radius: 50%;
+          margin: 0 .125rem;
+
+          &.victory {
+            background-color: var(--green-500);
+          }
+
+          &.lost {
+            background-color: var(--red-500);
+          }
+        }
+      }
+    }
+  }
+}

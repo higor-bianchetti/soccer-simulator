@@ -1,34 +1,46 @@
 .main {
-  padding-top: 1rem;
+  padding: 1rem .5rem;
+
+  @media(min-width: 426px) {
+    padding: 4rem 2rem;
+  }
+
+  .banner {
+    display: inline-block;
+    width: 100%;
+  }
 
   .table {
-    margin: 1rem auto;
-    max-width: 64rem;
+    margin-top: 1rem;
 
     .theader {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border: solid 1px var(--gray-300);
+      border-bottom: solid 3px var(--gray-300);
       padding: .25rem;
-
+  
       .title {
         margin-left: .5rem;
       }
-
+  
       .score {
-        margin-right: .5rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
         min-width: 25rem;
+  
+        .values {
+          padding: 0 .5rem;
+          min-width: 2.5rem;
+        }
         
         @media(max-width: 426px) {
           min-width: 6rem;
         }
       }
     }
-
+  
     .tbody {
       .rank {
         display: flex;
@@ -36,57 +48,71 @@
         justify-content: space-between;
         border-bottom: solid 1px var(--gray-300);
 
+        &:hover {
+          background-color: var(--gray-100);
+        }
+  
         .team {
           display: flex;
           align-items: center;
           padding: .25rem;
-
+  
           .pos {
             font-size: 1.25rem;
             font-weight: bold;
             min-width: 2rem;
             text-align: center;
           }
-
+  
           .imgTeam {
             display: flex;
             align-items: center;
             margin-right: .5rem;
-
+  
             img {
               width: 2rem;
               height: 2rem;
             }
           }
         }
-
+  
         .stats {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: flex-start;
           margin-right: .75rem;
           min-width: 25rem;
-
+  
+          .values {
+            padding: 0 .5rem;
+            min-width: 2.5rem;
+          }
+  
           @media(max-width: 426px) {
             min-width: 6rem;
+            margin-right: 0;
+  
+            .values {
+              padding: 0 .5rem;
+            }
           }
-
+  
           .form {
             display: flex;
             align-items: center;
             justify-content: space-between;
-
+  
             .status {
               width: .75rem;
               height: .75rem;
               background-color: var(--gray-400);
               border-radius: 50%;
               margin: 0 .125rem;
-
+  
               &.victory {
                 background-color: var(--green-500);
               }
-
+  
               &.lost {
                 background-color: var(--red-500);
               }
@@ -94,38 +120,6 @@
           }
         }
       }
-      // .team {
-      //   display: flex;
-      //   align-items: center;
-      //   justify-content: space-between;
-      //   font-size: 1rem;
-      //   padding: .25rem 1rem;
-
-      //   .pos {
-      //     font-weight: bolder;
-      //     font-size: 1.25rem;
-      //     min-width: 2rem;
-      //     text-align: center;
-      //   }
-
-      //   .imgTeam {
-      //     display: flex;
-      //     align-items: center;
-
-      //     img {
-      //       width: 2rem;
-      //       height: 2rem;
-      //     }
-      //   }
-
-        // .nameTeam {
-        //   flex-grow: 1;
-
-          // @media(max-width: 426px) {
-          //   font-size: .875rem;
-          // }
-        // }
-      // }
     }
   }
 }
