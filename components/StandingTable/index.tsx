@@ -44,7 +44,7 @@ export function StandingTable({league}: StandingTableProps) {
                 <div className={styles.values}>{team.goalsDiff}</div>
                 <div className='m-hide'>
                   <div className={styles.form}>
-                    {team.form.split('').map(p =>
+                    {team.form?.length && team.form.split('').map(p =>
                       <div className={`${styles.status} ${p == 'W' ? styles.victory : p == 'L' ? styles.lost : styles.draw}`}>
                       </div>
                     )}
