@@ -1,0 +1,67 @@
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px var(--gray-300);
+
+  &:hover {
+    background-color: var(--gray-100);
+    cursor: pointer;
+  }
+
+  .pos {
+    font-size: 1.25rem;
+    font-weight: bold;
+    min-width: 2rem;
+    text-align: center;
+  }
+
+  .playerInfo {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    .photo {     
+      margin-right: .5rem;
+      padding-top: .5rem;
+
+      img {
+        width: 3rem;
+        height: 3rem;
+        border: solid 1px var(--gray-300);
+        border-radius: 50%;
+      }
+
+      .team {
+        margin-bottom: -1.5rem;
+
+        img {
+          position: relative;
+          width: 1.5rem;
+          height: 1.5rem;
+          top: -1.5rem;
+          right: -2rem;
+        }
+      }
+    }
+
+    .info {
+      .name {
+        margin-bottom: .5rem;
+      }
+
+      .position {
+        font-size: .75rem;
+        color: var(--gray-300);
+        margin-left: .5rem;
+      }
+    }
+  }
+
+  .score {
+    margin-right: .5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--green-500);
+  }
+}

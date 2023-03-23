@@ -1,10 +1,8 @@
+import { Team } from "./team";
+
 export interface Standing {
   rank: number;
-  team: {
-    id: number;
-    name: string;
-    logo: string;
-  },
+  team: Team;
   points: number;
   goalsDiff: number;
   group: string;
