@@ -4,9 +4,10 @@ import styles from './styles.module.scss';
 interface PlayerCardProps {
   pos: number;
   player: PlayerStat;
+  score: number;
 }
 
-export function PlayerCard({pos, player}: PlayerCardProps) {
+export function PlayerCard({pos, player, score}: PlayerCardProps) {
   return (
     <div className={styles.player}>
       <div className={styles.pos}>{pos}</div>
@@ -22,7 +23,7 @@ export function PlayerCard({pos, player}: PlayerCardProps) {
           <div className={styles.position}>{player.statistics[0].games.position}</div>
         </div>
       </div>
-      <div className={styles.score}>{player.statistics[0].goals.total}</div>
+      <div className={styles.score}>{score}</div>
     </div>
   )
 }
