@@ -25,7 +25,7 @@ export function StandingTable({league}: StandingTableProps) {
         </div>
         <div className={styles.tbody}>
           {league.standings[0].map((team) =>
-            <div className={styles.rank}>
+            <div className={styles.rank} key={team.team.id}>
               <div className={styles.team}>
                 <div className={styles.pos}>{team.rank}</div>
                 <div className={styles.imgTeam}>
